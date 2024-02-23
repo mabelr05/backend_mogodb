@@ -28651,7 +28651,7 @@ aQ2(a){return a},
 aSF(a){return a},
 axK(){var s,r=$.xv().Ia$
 r===$&&A.a()
-r.qs$="http://localhost:8080/api"
+r.qs$="https://backend-mogodb.onrender.com/api"
 s=A.cz(J.bg($.q_.aT().a,"token"))
 r.sVT(0,A.ay(["x-token",s==null?"":s],t.N,t.z))},
 oT(a){return A.aNh(a)},
