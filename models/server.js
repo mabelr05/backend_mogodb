@@ -53,6 +53,7 @@ class Server {
             tempFileDir : '/tmp/',
             createParentPath: true
         }));
+        this.app.use('/uploads/imgs', express.static('uploads/imgs'));
 
     }
 

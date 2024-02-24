@@ -13,11 +13,12 @@ const obtenerPost = async (req, res = response) => {
 }
 
 const crearPost = async (req, res = response) => {
-    const { titulo, descripcion, autor } = req.body;
+    const { titulo, descripcion,img, autor } = req.body;
 
     try {
-        const post = new Post({ titulo, descripcion, autor });
+        const post = new Post({ titulo, descripcion, img, autor });
         await post.save();
+        console.log(post);
         res.status(201).json(post);
     } catch (error) {
         console.log(error);
