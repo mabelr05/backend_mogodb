@@ -17,7 +17,8 @@ class Server {
             productos:  '/api/productos',
             usuarios:   '/api/usuarios',
             uploads:    '/api/uploads',
-            posts:      '/api/posts' // Ruta para los posts
+            posts:      '/api/posts'
+            cuotas:     '/api/cuotas' // Ruta para los posts
         }
 
 
@@ -66,7 +67,7 @@ class Server {
         this.app.use( this.paths.usuarios, require('../routes/usuarios'));
         this.app.use( this.paths.uploads, require('../routes/uploads'));
         this.app.use( this.paths.posts, require('../routes/posts')); // Agregar ruta para los posts
-        
+        this.app.use( this.paths.cuotas, require('../routes/cuotas'));
     }
 
     listen() {

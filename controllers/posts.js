@@ -4,7 +4,7 @@ const { Post } = require('../models');
 const obtenerPosts = async (req, res = response) => {
     const posts = await Post.find().populate('autor', 'nombre');
     res.json({ posts });
-    console.log(JSON.stringify(posts));
+    console.log('Consuta obtener posts');
 }
 
 const obtenerPost = async (req, res = response) => {
