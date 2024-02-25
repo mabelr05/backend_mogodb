@@ -17,7 +17,7 @@ class Server {
             productos:  '/api/productos',
             usuarios:   '/api/usuarios',
             uploads:    '/api/uploads',
-            posts:      '/api/posts'
+            posts:      '/api/posts',
             cuotas:     '/api/cuotas' // Ruta para los posts
         }
 
