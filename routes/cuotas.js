@@ -22,7 +22,7 @@ router.get('/:id', [
 
 // Crear cuota - privado - cualquier persona con un token válido
 router.post('/', [
-    validarJWT,
+    //validarJWT,  //validar x-token
     check('motivo', 'El motivo es obligatorio').not().isEmpty(),
     check('monto', 'El monto es obligatorio').not().isEmpty(),
     check('fecha_limite', 'La fecha límite es obligatoria').not().isEmpty(),

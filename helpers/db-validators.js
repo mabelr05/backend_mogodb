@@ -1,5 +1,5 @@
 const Role = require('../models/role');
-const { Usuario, Categoria, Producto } = require('../models');
+const { Usuario, Categoria, Producto, Pago } = require('../models');
 
 const esRoleValido = async(rol = 'USER_ROLE') => {
 
@@ -51,6 +51,13 @@ const existeProductoPorId = async( id ) => {
     }
 }
 
+const existePagoPorId = async(id) => {
+    const pago = await Pago.findById(id);
+    if (!pago) {
+        throw new Error('El pago con ese ID no existe');
+    }
+};
+
 /**
  * Validar colecciones permitidas
  */
@@ -70,6 +77,7 @@ module.exports = {
     existeUsuarioPorId,
     existeCategoriaPorId,
     existeProductoPorId,
-    coleccionesPermitidas
+    coleccionesPermitidas,
+    existePagoPorId
 }
 

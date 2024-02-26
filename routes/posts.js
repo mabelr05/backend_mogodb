@@ -28,7 +28,7 @@ router.get('/:id',[
 
 // Crear post - privado - cualquier persona con un token válido
 router.post('/', [ 
-    validarJWT,
+    //validarJWT, //validar x-token
     check('titulo','El título es obligatorio').not().isEmpty(),
     check('descripcion','La descripción es obligatoria').not().isEmpty(),
     validarCampos

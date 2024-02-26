@@ -19,4 +19,10 @@ const CuotaSchema = Schema({
     }
 });
 
+CuotaSchema.methods.toJSON = function() {
+    const { __v, _id, ...cuota  } = this.toObject();
+    cuota._id = _id;
+    return cuota;
+}
+
 module.exports = model('Cuota', CuotaSchema);
