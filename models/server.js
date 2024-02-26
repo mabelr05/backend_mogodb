@@ -19,7 +19,9 @@ class Server {
             uploads:    '/api/uploads',
             posts:      '/api/posts',// Ruta para los posts
             cuotas:     '/api/cuotas', //Rutas para las cuotas
-            pagos: '/api/pagos' //Rutas para el pago de las cuotas
+            pagos:      '/api/pagos', //Rutas para el pago de las cuotas
+            gastos:     '/api/gastos', //Rutas para el gasto
+            totales: '/api/totales', //Rutas para el
         }
 
 
@@ -69,7 +71,9 @@ class Server {
         this.app.use( this.paths.uploads, require('../routes/uploads'));
         this.app.use( this.paths.posts, require('../routes/posts')); // Agregar ruta para los posts
         this.app.use( this.paths.cuotas, require('../routes/cuotas'));
-        this.app.use( this.paths.pagos, require('../routes/pagos')); 
+        this.app.use( this.paths.pagos, require('../routes/pagos'));
+        this.app.use( this.paths.gastos, require('../routes/gastos')); 
+        this.app.use( this.paths.totales, require('../routes/totales'));
 
         /* Error Handling */
        

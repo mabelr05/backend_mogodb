@@ -5,9 +5,10 @@ const Producto = require('./producto');
 const Role = require('./role');
 const Server = require('./server');
 const Usuario = require('./usuario');
-const Post= require('./post');
-const Cuota=require('./cuota');
-const Pago= require('./pago')
+const Post = require('./post');
+const Cuota = require('./cuota');
+const Pago = require('./pago')
+const Gasto =require('./gasto')
 
 
 
@@ -20,5 +21,6 @@ module.exports = {
     Post,
     Cuota,
     Pago,
+    Gasto,
 }
 

@@ -58,6 +58,13 @@ const existePagoPorId = async(id) => {
     }
 };
 
+const existeGastoPorId = async (id) => {
+    const gasto = await Gasto.findById(id);
+    if (!gasto) {
+        throw new Error('El ID del gasto no existe en la base de datos');
+    }
+};
+
 /**
  * Validar colecciones permitidas
  */
@@ -71,6 +78,7 @@ const coleccionesPermitidas = ( coleccion = '', colecciones = []) => {
 }
 
 
+
 module.exports = {
     esRoleValido,
     emailExiste,
@@ -78,6 +86,7 @@ module.exports = {
     existeCategoriaPorId,
     existeProductoPorId,
     coleccionesPermitidas,
-    existePagoPorId
+    existePagoPorId,
+    existeGastoPorId
 }
 
