@@ -21,7 +21,7 @@ class Server {
             cuotas:     '/api/cuotas', //Rutas para las cuotas
             pagos:      '/api/pagos', //Rutas para el pago de las cuotas
             gastos:     '/api/gastos', //Rutas para el gasto
-            totales: '/api/totales', //Rutas para el
+            totales:    '/api/totales', //Rutas para el
         }
 
 
